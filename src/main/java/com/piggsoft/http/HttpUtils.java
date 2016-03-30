@@ -126,7 +126,7 @@ public class HttpUtils {
     private static <T> T parse(String s, Class<T> clazz) {
         logger.debug("解析的字符串是==>", s);
         StringReader reader = new StringReader(s);
-        T t = JSON.parseObject(s, clazz);//JAXB.unmarshal(reader, clazz);
+        T t = JSON.parseObject(s, clazz);
         reader.close();
         return t;
     }
