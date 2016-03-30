@@ -4,6 +4,7 @@ import com.piggsoft.validate.exception.ValidateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.util.ConcurrentReferenceHashMap;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -11,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * <br>Created by fire pigg on 2016/01/14.
@@ -22,7 +22,7 @@ public class ParamsValidateHandler extends HandlerInterceptorAdapter {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ParamsValidateHandler.class);
 
-    private static Map<Method, ParamsValidate> CACHE = new ConcurrentHashMap<Method, ParamsValidate>();
+    private static Map<Method, ParamsValidate> CACHE = new ConcurrentReferenceHashMap<Method, ParamsValidate>();
 
 
     @Override

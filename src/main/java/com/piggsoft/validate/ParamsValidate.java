@@ -17,15 +17,4 @@ import java.lang.annotation.Target;
 public @interface ParamsValidate {
 
     ParamValidate[] value();
-
-    /**
-     * 是否验证图片验证码
-     */
-    boolean iCode() default false;
-
-    /**
-     * 是否验证重复提交
-     */
-    boolean resubmit() default false;
-
 }
