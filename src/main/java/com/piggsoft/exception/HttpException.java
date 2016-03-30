@@ -1,11 +1,16 @@
 package com.piggsoft.exception;
 
+import java.io.Serializable;
+
 /**
  * <br>Created by fire pigg on 2016/3/30.
  *
  * @author piggsoft@163.com
  */
-public class HttpException extends RuntimeException {
+public class HttpException extends RuntimeException{
+
+    private static final long serialVersionUID = -3915870510050754683L;
+
     private String code;
     private String msg;
 

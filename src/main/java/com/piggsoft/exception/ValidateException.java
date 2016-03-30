@@ -6,6 +6,9 @@ package com.piggsoft.exception;
  * @author piggsoft@163.com
  */
 public class ValidateException extends RuntimeException {
+
+    private static final long serialVersionUID = 5842928551048581660L;
+
     private String code;
     private String msg;
 
