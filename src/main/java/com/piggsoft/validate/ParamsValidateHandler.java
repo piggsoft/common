@@ -1,6 +1,6 @@
 package com.piggsoft.validate;
 
-import com.piggsoft.exception.ValidateException;
+import com.piggsoft.validate.exception.ValidateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;

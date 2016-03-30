@@ -1,6 +1,4 @@
-package com.piggsoft.exception;
-
-import java.io.Serializable;
+package com.piggsoft.http.exception;
 
 /**
  * <br>Created by fire pigg on 2016/3/30.
@@ -33,12 +31,6 @@ public class HttpException extends RuntimeException{
 
     public HttpException(String code, String msg, Throwable cause) {
         super(cause);
-        this.code = code;
-        this.msg = msg;
-    }
-
-    public HttpException(String code, String msg, String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
         this.code = code;
         this.msg = msg;
     }

@@ -1,4 +1,4 @@
-package com.piggsoft.exception;
+package com.piggsoft.validate.exception;
 
 /**
  * <br>Created by fire pigg on 2016/3/30.
@@ -31,12 +31,6 @@ public class ValidateException extends RuntimeException {
 
     public ValidateException(String code, String msg, Throwable cause) {
         super(cause);
-        this.code = code;
-        this.msg = msg;
-    }
-
-    public ValidateException(String code, String msg, String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
         this.code = code;
         this.msg = msg;
     }

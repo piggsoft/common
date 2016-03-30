@@ -1,7 +1,7 @@
 package com.piggsoft.http;
 
 import com.alibaba.fastjson.JSON;
-import com.piggsoft.exception.HttpException;
+import com.piggsoft.http.exception.HttpException;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -28,8 +28,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import static javafx.scene.input.KeyCode.T;
 
 /**
  * <br>Created by fire pigg on 2016/3/28.
