@@ -1,5 +1,8 @@
 package com.piggsoft.collections;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,6 +20,8 @@ import java.util.TreeMap;
  */
 public class MapUtils {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(MapUtils.class);
+
     /**
      * 使用 Map按key进行排序
      * @param map
@@ -24,6 +29,7 @@ public class MapUtils {
      */
     public static <K, V> Map<K, V> sortMapByKey(Map<K, V> map, Comparator<? super K> comparator) {
         if (org.apache.commons.collections.MapUtils.isEmpty(map)) {
+            LOGGER.warn("the map is empty");
             return null;
         }
         Map<K, V> sortMap = new TreeMap<>(comparator);
@@ -38,6 +44,7 @@ public class MapUtils {
      */
     public static <K, V> Map<K, V> sortMapByValue(Map<K, V> map, Comparator<? super Map.Entry<K, V>> comparator) {
         if (org.apache.commons.collections.MapUtils.isEmpty(map)) {
+            LOGGER.warn("the map is empty");
             return null;
         }
         Map<K, V> sortedMap = new LinkedHashMap<>();

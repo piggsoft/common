@@ -1,4 +1,4 @@
-package com.piggsoft.http.response;
+package com.piggsoft.web;
 
 import org.apache.http.util.CharArrayBuffer;
 
